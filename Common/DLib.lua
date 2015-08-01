@@ -840,9 +840,14 @@ end
 MenuBool={}
 function MenuBool.new(name, active)
 	--item fields
+
+	if active == nil then
+		active = true
+	end
+
 	local this = {}
 	this.name = name or "Unnamed"
-	this.valueActive=false
+	this.valueActive=active
 	this.parent=parent
 	this.mainMenu=nil
 	this.textY=0
