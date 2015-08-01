@@ -328,10 +328,10 @@ function MainMenu.new()
 	end
 	this.conf=c.config.menu
 	if c.config.menuX==nil then
-		c.config.menuX=300
+		c.config.menuX=30
 	end
 	if c.config.menuY==nil then
-		c.config.menuY=300
+		c.config.menuY=30
 	end
 	
 	this.children = {}
