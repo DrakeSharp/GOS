@@ -328,10 +328,10 @@ function MainMenu.new()
 	end
 	this.conf=c.config.menu
 	if c.config.menuX==nil then
-		c.config.menuX=300
+		c.config.menuX=30
 	end
 	if c.config.menuY==nil then
-		c.config.menuY=300
+		c.config.menuY=30
 	end
 	
 	this.children = {}
@@ -840,9 +840,14 @@ end
 MenuBool={}
 function MenuBool.new(name, active)
 	--item fields
+
+	if active == nil then
+		active = true
+	end
+
 	local this = {}
 	this.name = name or "Unnamed"
-	this.valueActive=false
+	this.valueActive=active
 	this.parent=parent
 	this.mainMenu=nil
 	this.textY=0
